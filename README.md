@@ -63,7 +63,7 @@ For notices about major changes and general discussion of Flyve MDM development,
 You can also chat with us via IRC in [#flyve-mdm on freenode](http://webchat.freenode.net/?channels=flyve-mdm]).
 Ping me @btry in the IRC chatroom if you get stuck.
 
-## Copyright
+## Copying
 
 * **Name**: [Flyve MDM](https://flyve-mdm.com/) is a registered trademark of [Teclib'](http://www.teclib-edition.com/en/).
 * **Code**: you can redistribute it and/or modify it under the terms of the GNU AGPL v3 license ([GPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html)).
