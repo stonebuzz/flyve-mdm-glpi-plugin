@@ -26,7 +26,7 @@ To get started, check out <https://flyve-mdm.com/>!
 
 ## Synopsis
 
-Flyve MDM Plugin for GLPI is a subproject of Flyve MDM.
+This plugin for GLPI is a subproject of Flyve MDM.
 
 It provides a stand alone web based administration and a interface integrated in GLPI. The later one may be the preferred by those who use GLPI for asset management and ticketing.
 
@@ -55,7 +55,7 @@ See [the tags section of our GitHub project](http://github.com/flyve-mdm/flyve-m
 Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our
 guidelines for [contributing](./CONTRIBUTING.md) and then check out one of our issues in the [Issues Dashboard](https://github.com/flyve-mdm/flyve-mdm-glpi-plugin/issues).
 
-If you are not a developer you may contribute the project by [translating it](https://www.transifex.com/flyve-mdm/public/), by submitting documentation or by testing the product.
+If you are not a developer you may contribute the project by [translating it](https://www.transifex.com/flyve-mdm/public/), by [submitting documentation](https://github.com/flyve-mdm/flyve-mdm-glpi-plugin/wiki) or by testing the product.
 
 ## Contact
 
