@@ -32,6 +32,7 @@
 namespace GlpiPlugin\Flyvemdm\Mqtt;
 
 use GlpiPlugin\Flyvemdm\Broker\BrokerMessage;
+use Toolbox;
 
 if (!defined('GLPI_ROOT')) {
    die("Sorry. You can't access this file directly");
@@ -52,6 +53,17 @@ class MqttSendMessageHandler {
       $qos = ($option = $mqttEnvelope->getContext('qos')) ? $option : 0;
       $retain = ($option = $mqttEnvelope->getContext('retain')) ? $option : 0;
       $topic = $mqttEnvelope->getContext('topic');
-      $this->connection->publish($topic, $message->getMessage(), $qos, $retain);
+      $bodyMessage = $message->getMessage();
+
+      if (null === $bodyMessage && strpos($topic, "defaultStreamType") === false) {
+         $chunks = explode('/', $topic);
+         switch ($chunks[3]) {
+            case 'Policy':
+               // null messages aren't sent when reseting policies values, let's fix that
+               $bodyMessage = '{"' . $chunks[4] . '":"default","taskId":"' . $chunks[6] . '"}';
+               break;
+         }
+      }
+      $this->connection->publish($topic, $bodyMessage, $qos, $retain);
    }
 }
