@@ -140,6 +140,7 @@ class PluginFlyvemdmMenu extends CommonGLPI {
       $menu = [];
       $menu['title'] = self::getMenuName();
       $menu['page']  = "$front_flyvemdm/menu.php";
+      $menu['icon']  = self::getIcon();
 
       $itemtypes = [
          PluginFlyvemdmAgent::class        => 'agent',
@@ -159,5 +160,9 @@ class PluginFlyvemdmMenu extends CommonGLPI {
          }
       }
       return $menu;
+   }
+
+   static function getIcon() {
+      return "fa-fw fas fa-cog";
    }
 }
